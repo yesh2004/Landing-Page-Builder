@@ -1,0 +1,38 @@
+digraph "AI Content Generator Architecture" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="AI Content Generator Architecture" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	"03644195f44c465daffc9478e9f282e5" -> b174bf53fd784bf1844a4970d0a2436a [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b174bf53fd784bf1844a4970d0a2436a -> c6d1fb63f50e428ab81b965a5f5e21cd [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b174bf53fd784bf1844a4970d0a2436a -> "905030f627c94cb2932388be86d2dc5c" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b174bf53fd784bf1844a4970d0a2436a -> "959a3b1a7ee14d4288d54a5497be2e08" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b174bf53fd784bf1844a4970d0a2436a -> "89d34a73f7964be493a0ce67dca2b0b4" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b174bf53fd784bf1844a4970d0a2436a -> ab0db051329548bab73bb9d1bf11cda2 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b174bf53fd784bf1844a4970d0a2436a -> "6727cf60ce8a4bcfa597b1f0959b1650" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b174bf53fd784bf1844a4970d0a2436a -> e5a4834ab11b42b093ece8aedca31311 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	subgraph cluster_Frontend {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label=Frontend labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"03644195f44c465daffc9478e9f282e5" [label=User height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/client\users.png" shape=none]
+		b174bf53fd784bf1844a4970d0a2436a [label="React + Vite" height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/compute\rack.png" shape=none]
+		c6d1fb63f50e428ab81b965a5f5e21cd [label="Home Page" height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/compute\rack.png" shape=none]
+		"905030f627c94cb2932388be86d2dc5c" [label="Login Page" height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/compute\rack.png" shape=none]
+		"959a3b1a7ee14d4288d54a5497be2e08" [label="Register Page" height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/compute\rack.png" shape=none]
+		"89d34a73f7964be493a0ce67dca2b0b4" [label=Dashboard height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/compute\rack.png" shape=none]
+		ab0db051329548bab73bb9d1bf11cda2 [label="Blog Generator" height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/compute\rack.png" shape=none]
+		"6727cf60ce8a4bcfa597b1f0959b1650" [label="Email Generator" height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/compute\rack.png" shape=none]
+		e5a4834ab11b42b093ece8aedca31311 [label="Story Generator" height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/compute\rack.png" shape=none]
+	}
+	"211a871c0fc945c397d6fbe28d28390e" -> "0a48e5fec0874ab59dfdfac80f222e36" [dir=none fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"211a871c0fc945c397d6fbe28d28390e" -> "6a76c8084c8e4807aab262d89c1bc04d" [dir=none fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	subgraph cluster_Backend {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label=Backend labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"211a871c0fc945c397d6fbe28d28390e" [label="ExpressJS Server" height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/os\ubuntu.png" shape=none]
+		"0a48e5fec0874ab59dfdfac80f222e36" [label="JWT Auth" height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/network\firewall.png" shape=none]
+		"6a76c8084c8e4807aab262d89c1bc04d" [label=bcryptjs height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/compute\rack.png" shape=none]
+	}
+	a19dc1e9c4024f53bc37fb5f7bc9effd [label="Gemini AI" height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/compute\rack.png" shape=none]
+	"06e1f1be3ab04bf0ad8ec9e5cdea7709" [label="MySQL DB" height=1.9 image="C:\Users\vyesh\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/database\sql.png" shape=none]
+	b174bf53fd784bf1844a4970d0a2436a -> "211a871c0fc945c397d6fbe28d28390e" [label="API requests" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"211a871c0fc945c397d6fbe28d28390e" -> "06e1f1be3ab04bf0ad8ec9e5cdea7709" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"211a871c0fc945c397d6fbe28d28390e" -> a19dc1e9c4024f53bc37fb5f7bc9effd [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}
